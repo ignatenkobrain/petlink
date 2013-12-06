@@ -25,7 +25,8 @@ class ErrorInCFunction(Exception):
 
 
 # Load library
-petlink32_c = load_c_library("petlink32_c",localpath())
+path = filepath(__file__) 
+petlink32_c = load_c_library("petlink32_c",path)
 
 # Utility functions 
 def status_success(): 
