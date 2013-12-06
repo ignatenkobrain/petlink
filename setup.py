@@ -5,10 +5,10 @@
 # Oct 2013, Helsinki 
 
 
-from setuptools import setup, Extension
+from setuptools import setup, Extension, Library
 from glob import glob 
 
-petlink32_c_module = Extension('petlink.petlink32_c', ['petlink/petlink32_c.c']) 
+petlink32_c_module = Library('petlink.petlink32_c', ['petlink/petlink32_c.c']) 
 
 setup(
     name='petlink',
@@ -35,7 +35,7 @@ setup(
     ],
     install_requires=[
         "numpy >= 1.7.1", 
-        "wrapid >= 0.1.0", 
+        "simplewrap >= 0.1.0", 
     ], 
 )
 

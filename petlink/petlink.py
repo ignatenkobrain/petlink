@@ -6,7 +6,7 @@
 
 __all__ = ['petlink32_info','petlink32_bin_addresses']
 
-from wrapid import *
+from simplewrap import *
 import os
 
 class ErrorInCFunction(Exception): 
@@ -25,7 +25,7 @@ class ErrorInCFunction(Exception):
 
 
 # Load library
-petlink32_c = load_c_library("petlink32_c",os.path.split(__file__)[0])
+petlink32_c = load_c_library("petlink32_c",localpath())
 
 # Utility functions 
 def status_success(): 
