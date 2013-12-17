@@ -3,15 +3,19 @@
 // Stefano Pedemonte
 // Aalto University, School of Science, Helsinki
 // Oct 2013, Helsinki 
-
+// Martinos Center for Biomedical Imaging, Harvard University/MGH, Boston
+// Dec. 2013, Boston
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-#define STATUS_SUCCESS      0
-#define STATUS_IO_ERROR     1
-#define STATUS_DECODE_ERROR 2
+#define STATUS_SUCCESS              0
+#define STATUS_IO_ERROR             1
+#define STATUS_DECODE_ERROR         2 
+#define STATUS_INITIALISATION_ERROR 3
+#define STATUS_PARAMETER_ERROR      4
+#define STATUS_UNHANDLED_ERROR      5 
 
 /*
 Return the status flags, so that they can be used by the (Python) wrapper to interpret 
@@ -32,6 +36,22 @@ extern int status_decode_error(int *status)
     *status = STATUS_DECODE_ERROR; 
     return STATUS_SUCCESS; 
 }
+extern int status_initialisation_error(int *status)
+{
+    *status = STATUS_INITIALISATION_ERROR; 
+    return STATUS_SUCCESS; 
+}
+extern int status_parameter_error(int *status)
+{
+    *status = STATUS_PARAMETER_ERROR; 
+    return STATUS_SUCCESS; 
+}
+extern int status_unhandled_error(int *status)
+{
+    *status = STATUS_UNHANDLED_ERROR; 
+    return STATUS_SUCCESS; 
+}
+
 
 
 /*
