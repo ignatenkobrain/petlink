@@ -33,7 +33,12 @@ class ErrorInCFunction(Exception):
 
 # Load library
 path = filepath(__file__) 
-petlink32_c = load_c_library("petlink32_c",path)
+(found,fullpath,path) = find_c_library("petlink32_c",[path,])
+if found: 
+    petlink32_c = load_c_library(fullpath)
+else: 
+    raise LibraryNotFound("petlink32_c") 
+
 
 # Utility functions 
 def status_success(): 
