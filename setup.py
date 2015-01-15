@@ -5,10 +5,10 @@
 # Oct 2013, Helsinki 
 
 
-from setuptools import setup, Extension, Library
+from setuptools import setup, Extension
 from glob import glob 
 
-petlink32_c_module = Library('petlink.petlink32_c', ['petlink/petlink32_c.c']) 
+petlink32_c_module = Extension('petlink.petlink32_c', ['petlink/petlink32_c.c']) 
 
 setup(
     name='petlink',
