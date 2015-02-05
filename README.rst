@@ -12,9 +12,9 @@ Installation
 
 pip install petlink
 
+or download source files, uncompress, at the command line cd to the downloaded folder and run: 
 
-
-
+python setup.py build test install 
 
 
 
