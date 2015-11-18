@@ -19,7 +19,7 @@ petlink32_c_module = Extension('petlink.petlink32_c', ['petlink/petlink32_c.c'])
 
 setup(
     name='petlink',
-    version='0.2.1',
+    version='0.3.0',
     author='Stefano Pedemonte',
     author_email='stefano.pedemonte@gmail.com',
     packages=['petlink', 'petlink.examples', 'petlink.tests'], 
@@ -41,7 +41,7 @@ setup(
     ],
     install_requires=[
         "numpy >= 1.6.0", 
-        "simplewrap >= 0.2.0", 
+        "simplewrap >= 0.3.0", 
     ], 
 )
 
